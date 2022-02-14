@@ -1,20 +1,37 @@
-.select{
+.select {
+    width: clamp(320px, 40%, 800px);
+    // &:hover{
+    //     cursor: pointer;
+    // }
+}
+
+.select > div{
     font-size: 22px;
     font-weight: 500;
-    height: 40px;
-    width: clamp(320px, 40%, 800px);
+    // height: 40px;
+    // width: clamp(320px, 40%, 800px);
     background-color: rgb(247, 247, 247);
     // box-shadow: none;
     border-radius: 10px;
-    padding: 5px 10px;
+    // padding: 5px 10px;
     outline: none;
     margin-bottom: 16px;
     text-align: center;
     cursor: pointer;
     transition: all ease 0.3s;
-    &:focus{
+    &>div {
+        cursor: pointer;
+        // &:hover {
+        //     cursor: text;
+        // }
+    }
+    &>div:focus {
+        box-shadow: 0 0 5px 2px #82598f;
+    }
+
+    &:focus {
         // border: solid 2px blueviolet;
-        box-shadow: 0 0 5px 2px #82598f;        
+        box-shadow: 0 0 5px 2px #82598f;   
     }
     
     &:hover{
@@ -25,4 +42,23 @@
         // padding: 10px;
     }
 
+
 }
+
+// .search {
+//     font-size: 22px;
+//     font-weight: 500;
+//     height: 40px;
+//     width: clamp(320px, 40%, 800px);
+//     background-color: rgb(247, 247, 247);
+//     // box-shadow: none;
+//     border-radius: 10px;
+//     padding: 5px 10px;
+//     outline: none;
+//     border: none;
+//     position: absolute;
+//     top: 0px;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+
+// }

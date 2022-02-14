@@ -26,7 +26,8 @@ const Form = () => {
                 validateOnBlur
                 validationSchema={validationsSchema}
                 onSubmit={(values)=>{
-                    console.log(values)
+                    console.log(values);
+                    console.log("Thank you for join!");
                 }}
             >
                 {
@@ -113,7 +114,8 @@ const Form = () => {
                         className={s.btn} 
                         disabled={!isValid && !dirty}
                         type={'submit'}
-                        // onClick={handleSubmit}
+                        // onClick={(handleSubmit)=>console.log(values)}
+                                onClick={() => handleSubmit()}
                         >
 
                         Submit</button>

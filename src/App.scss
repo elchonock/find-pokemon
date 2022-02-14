@@ -8,7 +8,24 @@
   align-items:center;
   position: relative;
   top: 30px;
+
+  #react-select-3-listbox {
+    background-color: #f8f1fafa;
+    // width: 97%;
+    // width: clamp(300px, 96%, 800px);
+    cursor: pointer;
+    &>*{
+      cursor: pointer;
+      &>*{
+        cursor: pointer;
+      }
+    }  
+  }
 }
+
+// .css-6j8wv5-Input:focus .css-6j8wv5-Input:hover {
+//   cursor: text;
+// }
 
 
 // .App-logo {

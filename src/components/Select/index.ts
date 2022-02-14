@@ -1,2 +1,2 @@
-import Select from "./Select";
-export default Select;
+import SelectPokemon from "./Select";
+export default SelectPokemon;

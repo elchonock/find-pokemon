@@ -12,3 +12,10 @@ export interface IAllPokemonsItem {
     url: string;
     id?: number;
 }
+
+// export interface ILiked {
+//     name: string,
+//     url: string,
+//     id: number,
+//     isLiked: boolean
+// }
