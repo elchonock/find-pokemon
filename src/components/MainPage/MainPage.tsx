@@ -4,8 +4,11 @@ import { getPokeData } from '../../services/gotPokemons';
 import { IAllPokemonsItem } from '../../types/pokemon.interface';
 import Form from '../Form';
 import PokemonCard from '../PokemonCard';
+import Search from '../Search'; 
 import SelectPokemon from '../Select';
 import s from './MainPage.module.css';
+
+import { PrimaryButton, SecondaryButton, Button, FileUploader } from '@panenco/ui';
 
 const MainPage = ():JSX.Element => {
     const [id, setId] = useState(1);
@@ -31,6 +34,17 @@ const MainPage = ():JSX.Element => {
             <SelectPokemon options={options} onChange={setId} id={id} />
             <PokemonCard liked={liked} setLiked={setLiked} setId={setId} pokemonName={options[id-1].name} id={id}></PokemonCard>
             <Form/>
+            <Search/>
+            <>
+                <PrimaryButton>Click PrimaryButton!</PrimaryButton> <br />
+                <SecondaryButton>Click secondary button!</SecondaryButton> <br />
+                <div className={s.uploader}>
+                   <FileUploader title="Upload a photo" /><br /> 
+                </div>
+                
+
+            </>
+
         </>
     );
 
